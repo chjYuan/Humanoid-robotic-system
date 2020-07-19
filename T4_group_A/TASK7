@@ -1,0 +1,9 @@
+Meanshift:using a small window and move the window to the area of maximum pixel desity.
+Camshift:At first, this method applies meanshift and when the meanshift converges, it will updates the window size depends on one formula. It calculates the orientataion of the best fitting ellipse to it as well. Afterwards it applies the meanshift again with the scaled search window and previous window location. Camshift converges when accuracy met.
+
+Difference between camshift and Meanshift: 
+When using Meanshift method, the size of the track window will not change and have no orientation. On contrast, the track window will change the size depending on the size of the obeject in the image and have an orientation i.e. it returned a rotated rectangle.
+
+
+Camshift stands for "Continuously Adaptive Mean Shift". It combines the basic Mean Shift algorithm with an adaptive region-sizing step. The kernel is a step function applied to a probability map. The probability of each image pixel is based on color using a method called histogram backprojection.
+
